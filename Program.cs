@@ -4,17 +4,24 @@
 // a = 2 b = 10 -> max = 10
 // a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Write first number:");
-int numberA = 5;
-Console.WriteLine("Write second number:");
-int numberB = 7;
+Console.WriteLine("Add first number:");
+string? numberStringA = Console.ReadLine();
+int numberA = Convert.ToInt32(numberStringA);
+Console.WriteLine("Add second number:");
+string? numberStringB = Console.ReadLine();
+int numberB = Convert.ToInt32(numberStringB);
+int max = 0, min = 0;
 if (numberA > numberB)
 {
-    Console.WriteLine("max =" numberA);
-    Console.WriteLine("min =" numberB);
+    max = numberA;
+    min = numberB;
 }    
 else
 {
-    Console.WriteLine("max =" numberB);
-    Console.WriteLine("min =" numberA);
+    max = numberB;
+    min = numberA;
 }
+Console.Write("Max:");
+Console.WriteLine(max);
+Console.Write("Min:");
+Console.WriteLine(min);
